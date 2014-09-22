@@ -1,0 +1,398 @@
+/**
+ * main layout by
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author Anika Henke <henke@cosmocode.de>
+ * @author Michael Klier <chi@chimeric.de>
+ *
+ * Modification for mmClean template
+ * @author Marcin Mierzejewski <marcin@mierzejewski.net>
+ *
+ * Further modifications:
+ * @author Alfonso E. Romero <aeromero AT cs.rhul.ac.uk>
+ *
+ */
+
+/* -------------- general elements --------------- */
+
+body 
+{
+  font: 400 14px/1.6 'Open Sans', Verdana, Helvetica, sans-serif;
+  margin:0;
+  background: #ffffff;
+}
+
+div.page
+{
+  margin: auto;
+  min-width: 870px;
+  width: 80%;
+  background: #ffffff;
+  padding: 0;
+}
+
+div.container
+{
+   overflow: hidden;
+}
+
+div.content 
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 95%;
+  background-color: #ffffff;
+}
+
+img 
+{
+    border:0;
+}
+
+hr 
+{
+  border: 0px;
+  border-top: 1px solid #8cbbac;
+  text-align:center;
+  height: 0px;
+}
+
+div.nothing 
+{
+  text-align:center;
+	margin: 2em;
+}
+
+/* --------------- Links ------------------ */
+
+a {
+color:#436976;
+text-decoration:none;
+}
+a:hover {
+color:#000000;
+text-decoration:underline;
+}
+
+/* windows share */
+a.windows{
+/*  background: transparent url(../images/windows.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 16px;*/
+  color:#436976;
+  text-decoration:none;
+} 
+a.windows:visited {
+color:#436976;
+}
+a.windows:hover { 
+text-decoration:underline;
+}
+
+/* interwiki link */
+a.interwiki{
+/*  background: transparent url(../images/interwiki.png) 0px 1px no-repeat;
+  padding-left: 16px;*/
+  color:#436976;
+  text-decoration:none;
+}
+a.interwiki:visited {
+color:#436976;
+}
+a.interwiki:hover {
+text-decoration:underline;
+}
+
+/* link to some embedded media */
+a.media {
+color:#436976;
+text-decoration:none;
+}
+a.media:hover {
+color:#436976;
+text-decoration:underline
+}
+
+/* email link */
+a.mail {
+/*background: transparent url(../images/mail_icon.gif) 0px 1px no-repeat;
+padding: 1px 0px 1px 16px;*/
+color:#436976;
+text-decoration:none;
+}
+a.mail:hover {
+text-decoration:underline;
+}
+
+/* existing wikipage */
+a.wikilink1:link    { color:#436976; text-decoration:none }
+a.wikilink1:visited { color:#436976; text-decoration:none }
+a.wikilink1:hover   { color:#436976; text-decoration:underline }
+
+/* not existing wikipage */
+a.wikilink2:link    { color:#232976; text-decoration:none }
+a.wikilink2:visited { color:#232976; text-decoration:none }
+a.wikilink2:hover   { color:#232976; text-decoration:underline }
+
+/* external link */
+a.urlextern{
+/*  background: transparent url(../images/link_icon.png) 0px 0px no-repeat;
+  padding: 1px 0px 1px 18px;*/
+  color:#436976;
+  text-decoration:none;
+}
+a.urlextern:visited {
+color:#436976;
+}
+a.urlextern:hover {
+text-decoration:underline;
+}
+
+
+/* ------------- Page elements ----------------- */
+
+div.preview{
+padding: 4px;
+border: 1px dashed #c3c3c3;
+}
+
+div.breadcrumbs{
+color: #666666;
+float:left;
+line-height:140%;
+margin-left:2px;
+font-size:11px;
+width:187px;
+}
+
+span.user{
+color: #cccccc;
+}
+
+/* embedded images */
+
+img.mediaright {
+border: 0;
+float: right;
+display:inline;
+margin-left: 15px;
+}
+
+acronym {
+cursor: help;
+border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+h1, h2, h3, h4, h5 
+{
+  color: #AAAAAA;
+  font-family: Verdana, Georgia, "Lucida", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-left:    0;
+  margin-right:   0;
+  margin-top:     0.5em;
+  margin-bottom:  0.5em;
+  padding-left:   0;
+  padding-right:  0;
+  padding-bottom:  0px;
+  clear: left;
+  font-size: 11px;
+}
+
+/* special headlines */
+h1 { font-size: 20px;}
+h2 {font-size: 14px;}
+h3 {font-size: 13px;}
+h4 {font-size: 12px;}
+
+/* unordered lists */
+ul 
+{ 
+line-height: 1.5em;
+list-style-type: square;
+padding: 0;
+margin: 0px;
+margin-left: 20px;
+margin-bottom: 10px;
+/*list-style-image: url(../images/bullet.gif);*/
+}
+
+/* ordered lists */
+ol {
+line-height: 1.5em;
+margin-left:25px;
+padding: 0;
+/*color: #638c9c;*/
+font-weight: bold;
+list-style-image: none;
+}
+
+ol.normal {
+line-height: 1.5em;
+margin-left:25px;
+padding: 0;
+/*color: #638c9c;*/
+font-weight: normal;
+list-style-image: none;
+}
+
+/* the list items overriding the ol definition */
+.li 
+{
+font-weight: normal;
+}
+
+ol {list-style-type: decimal}
+ol ol {list-style-type: upper-roman}
+ol ol ol {list-style-type: lower-alpha}
+ol ol ol ol {list-style-type: lower-greek}
+
+li.open {
+list-style-image: url(../images/open.gif);
+}
+
+li.closed {
+list-style-image: url(../images/closed.gif);
+}
+
+blockquote {
+font-size:11px;
+border-left: 2px solid #8cbbac;
+padding-left: 3px;
+margin-left: 0;
+}
+
+/* code blocks by indention */
+pre.pre {
+padding: 0.5em;
+border: 1px dashed #8cbbac;
+color: #333;
+background-color: #f7faf9;
+overflow: auto;
+}
+
+/* code blocks by code tag */
+pre.code {
+padding: 0.5em;
+border: 1px dashed #c3c3c3;
+color: #333;
+background-color: #fdfdfd;
+overflow: auto !important;
+overflow: scroll;
+width:90%;
+line-height:140%;
+}
+
+/* inline code words */
+code {
+}
+
+/* code blocks by file tag */
+pre.file {
+padding: 0.5em;
+border: 1px dashed #8cacbb;
+color: #333;
+background-color: #dee7ec;
+overflow: auto;
+}
+
+/* inline tables */
+table.inline {
+background-color: #ffffff;
+border-spacing: 0px;
+border-collapse: collapse;
+}
+
+table.inline th {
+padding: 3px;
+border: 1px solid #8cacbb;
+background-color: #dee7ec;
+}
+
+table.inline td {
+padding: 3px;
+border: 1px solid #8cacbb;
+}
+
+.leftalign{
+text-align: left;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+div.footnotes{
+    
+    height: 35px;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* ------------------ Additional ---------------------- */
+.footer
+{
+  background:#028e9b;
+  color: #ccc;
+  padding: 0px;
+}
+
+.footer a
+{
+    font-weight: bold;
+    color: #ccc;
+}
+
+.footer a:hover
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---------------  Header  ----------------- */
+
+.header 
+{
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    background:#00779B;
+}
+
+.logo 
+{
+    background-image: url(../files/fondo.png);
+    background-position: 0% 27%;
+	padding-top:0.1em;
+	padding-right:3em;
+	padding-bottom:0em;
+}
+
+.logo h1{
+    height: 90px;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+	font: 400 40px/1.3 'Ubuntu', Georgia, serif;
+/*	color:#BBDD55;*/
+	color:#AAFC47;
+	text-shadow: 3px 3px #00654e;
+	text-align:right;
+}
+
+/* ---------------  Publications  ----------------- */
+
+.author {
+	text-decoration:underline;
+}
+
+.journal{
+	font-variant:small-caps;
+	font-weight:bold;
+}
+
+
+/* --------------- index ------------------------ */
+#logo_paccanarolab{
+    width: 200px;
+}
+

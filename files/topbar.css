@@ -1,0 +1,71 @@
+/**
+ * css for mmClean template 
+ *
+ * @author Michael Klier <chi@chimeric.de> 
+ *
+ * Modification for mmClean Theme
+ * @author Marcin Mierzejewski <marcin@mierzejewski.net>
+ */
+
+div.topbar a.wikilink2,
+div.topbar a.wikilink1,
+div.topbar a.interwiki,
+div.topbar a.urlextern
+{
+    color: #BBDD55;
+    font-weight:bold;
+    font-size: 11pt;
+    padding-right: 25px; 
+    padding-left: 25px;
+}
+
+.link_selected{
+    background:white;
+    height:26px;
+    display:block;
+    float:left;
+    margin-top:-0.6em;
+    padding-top:0.6em;
+    padding-bottom:0.6em;
+    border-radius: 7px 7px 0 0;
+}
+
+div.topbar .link_selected a.wikilink2{
+        color: black;
+}
+
+div.topbar .link_selected a.wikilink2:hover{
+        color: black;
+}
+
+.link_not_selected{
+    height:1em;
+    display:block;
+    float:left;
+    padding-bottom:0.3em;
+}
+
+
+div.topbar a.wikilink2:hover,
+div.topbar a.wikilink1:hover,
+div.topbar a.interwiki:hover,
+div.topbar a.urlextern:hover 
+{
+    text-decoration: none; 
+    height: 18px;
+    color: #ffffff;
+}
+
+div.topbar
+{
+    height: 2.0em;
+    padding-left:1.5em;
+    padding-right:1.5em;
+    padding-top:0.5em;
+    padding-bottom:0;
+    border: 0px;
+   background: #028e9b;
+    width: auto;
+    list-style: none;
+}
+
