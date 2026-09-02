@@ -1,124 +1,66 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
 <head>
-<title>start [Alfonso E. Romero]</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="robots" content="index,follow"/>
-<meta name="date" content="2010-10-26T01:03:06+0200"/>
-<meta name="keywords" content="start"/>
-<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
-var NS='';var JSINFO = {"id":"start","namespace":""};
-//--><!]]></script>
-  <link rel="stylesheet" media="screen" type="text/css" href="./files/design.css"/>
-  <link rel="stylesheet" media="screen" type="text/css" href="./files/topbar.css"/>
-	<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-
-  </head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research &mdash; Alfonso E. Romero</title>
+<meta name="description" content="Research interests of Alfonso E. Romero: retrieval and ranking, semi-supervised learning on graphs, semantic similarity, multi-label classification, and applied machine learning in production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="files/site.css">
+</head>
 <body>
-
 <div class="page">
-	<div class="container">
-	    <div class="header">
-	    	<div class="logo">
-			<h1 id="top">Alfonso E. Romero</h1>
-		</div>
 
-		<div class="topbar">	
-				
-			<div class="link_not_selected"><a href="index.html" class="wikilink1" rel="nofollow">Main</a></div>
-			<div class="link_not_selected"><a href="bio.html" class="wikilink1" title="bio">Bio</a></div>
-			<div class="link_selected"><a href="#" class="wikilink2" title="research_lines">Research Lines</a></div>
-			<div class="link_not_selected"><a href="publications.html" class="wikilink1" title="publications">Publications</a></div>
-			<div class="link_not_selected"><a href="teaching.html" class="wikilink1" title="teaching">Teaching</a></div>
-			<div class="link_not_selected"><a href="software.html" class="wikilink1" title="software">Software</a></div>
+  <aside class="sidebar">
+    <p class="name"><a href="index.html">Alfonso E. Romero</a></p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="research_lines.html" aria-current="page">Research</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-		</div>
+  <div class="column">
 
+  <main>
+    <h1>Research</h1>
 
-		</div>
+    <p>My work has moved across several domains, from parliamentary archives to protein networks to consumer credit, but the methods underneath have been fairly stable. What follows is organised by problem rather than by field, which is closer to how I actually think about it. The full list is on the <a href="publications.html">publications</a> page.</p>
 
-	<div class="content">
+    <h2>Retrieval and ranking</h2>
 
-		<h1><a name="research_interests" id="research_interests">Research Interests</a></h1>
+    <p>My doctoral work was on probabilistic graphical models for information retrieval and text classification. I built retrieval models for structured documents, where the unit being ranked is not a flat document but a nested element, and where relevance has to propagate through the document tree. I also worked on automatic indexing against a thesaurus, in both supervised and unsupervised settings, and on classification in linked environments, where the links between documents carry information that the text alone does not.</p>
 
-		<p>Currently I am interested in these topics:</p>
+    <p>The systems from that period were <a href="software.html#garnata">Garnata</a>, a retrieval engine for structured documents built on influence diagrams, and an earlier XML indexing engine written in C++ that ended up powering the search system for the proceedings of the Parliament of Andalusia. Both were evaluated at INEX over several years.</p>
 
-		<ol class="normal"> 
-		<li><strong><span class="author">Protein function prediction</span>:</strong> this is a very broad topic and several 
-			approaches have been 
-			proposed to solve this task. I have worked in this problem via two different perspectives:
-			<p><strong>a) Using inference over biological networks</strong>: this approach considers that a certain property 
-			is known
-			for a subset of the proteins of interest, while unknown for the rest. If the network is built in a way that
-			the strength (or the presence) of the link resembles functional association, the properties for the group
-			can be computed using a simple guilt-by-association mechanism <a href="#1">[1]</a>, or a label diffusion method <a 
-			href="#2">[2]</a>, which can be framed into the semi-supervised learning paradigm. In this last framework I have
- 		        participated in the development of S2F, a method for protein function prediction using diffusion on graphs and 
-			very little initial information <a href="#3">[3]</a>. Besides, I published in Bioinformatics <a href="#4">[4]</a> 
-            a tool to compute semantic similarity networks, called <a href="http://www.paccanarolab.org/gosstoweb">GoSSTo</a>, 
-            which can be used to produce protein association networks to apply these methods. 
-			</p>
+    <h2>Semi-supervised learning on graphs</h2>
 
-			<p><strong>b) Discovering the consensus architecture of a protein</strong>. Proteins can be viewed as the combination
-			of one or more individual evolutionary units (known as <em>domains</em>). These domains carry out certain biological
-			processes and molecular functions. However, it is well-known that the function of a protein is not just the 
-			sum of the individual functions. I have implemented <a href="http://www.paccanarolab.org/ConSAT">ConSat</a> <a href="#5">[5]</a>, a method for obtaining the consensus 
-			domain architecture of a set of protins which provides function association methods.</p>
-		</li>
+    <p>A recurring problem in my work is the following: a property is known for a small subset of the nodes of a network and unknown for the rest, and the structure of the network is informative about that property. This is the semi-supervised setting on graphs, and label propagation and diffusion methods are the natural tools for it.</p>
 
-		<li>
-			<p><strong><span class="author">Network medicine</span>:</strong> Network medicine is a new paradigm in biosciences where graphs and computational tools are used to solve problems in medicine and human molecular biology. Graphs are used to represent biological entities (proteins, molecules, phenotypes, etc.) and relations between those entities, providing a holistic view of a certain problem to solve. Thus, the answer to several biomedical issues can be viewed in this frame and solved using both Machine Learning and Network Science techniques.</p>
+    <p>The clearest example is <a href="software.html#s2f">S2F</a>, a method for annotating the proteins of organisms for which little more than the sequence is known. The idea is to build a composite network by transferring functionally relevant information from well-studied organisms, and then diffuse the few known labels over it. It was published in <em>Nature Machine Intelligence</em>. The same framing underlies work on gene-disease association, where the question is how best to combine several heterogeneous networks before propagating.</p>
 
-            <p>I have collaborated with <a href="http://www.cs.rhul.ac.uk/~pwac092">Horacio Caniza</a> in the development of methods for the creation of a network measuring similarities between diseases. Using techniques such as semantic similarities and text mining we have built a new measure, which is able to resemble the underlying (real) molecular similarity without taking into consideration any genomic information. This is a particularly interesting problem for the case of rare diseases where very little (or any at all) pathogenic information is available. A manuscript is currently being prepared <a href="#6">[6]</a>. We also plan to apply the obtained network to develop a novel gene-disease prediction mechanism based on semi-supervised learning techniques on graphs.</p>
+    <h2>Semantic similarity</h2>
 
-        <p>The second problem I have worked in this field is the evaluation of different combination mechanisms of human gene networks for the problem of gene-disease association. This project was collaboration with Giorgio Valentini (Univ. of Milan, Italy) and his lab, materialised as a publication in Artificial Intelligence in Medicine <a href="#7">[7]</a>.</p>
-		</p>
-        </li>
+    <p>Measuring how similar two entities are when the only thing relating them is their position in an ontology is a surprisingly subtle problem, and the answer depends heavily on what the similarity will be used for. I wrote <a href="software.html#gossto">GOssTo</a>, a tool for computing several of these measures over the Gene Ontology, published in <em>Bioinformatics</em>. I also worked on similarity between diseases built from ontology structure and text, which matters most for rare diseases, where molecular information is scarce or absent.</p>
 
-<!--        <li>
-		<p>
-			<strong>Machine learning in cancer bioinformatics.</strong>
-		</p></li>-->
-        
-        </ol>
+    <h2>Multi-label and hierarchical classification</h2>
 
-<h3><strong>Bibliography (including work in progress)</strong></h3>
+    <p>Many real classification problems are not single-label: a document belongs to several categories at once, those categories are organised in a hierarchy, and the labels are correlated in ways a set of independent binary classifiers cannot capture. I worked on probabilistic approaches to this, and on the related question of how such systems should be evaluated, which is an area where the standard metrics are chosen badly more often than not.</p>
 
-<p><strong>*</strong> indicates co-first author</p>
+    <h2>Models that run in production</h2>
 
-<p><a name="1"></a>
-[1] R. Dóczi, L. Ökrész, <span class="author">A. E. Romero</span>, A. Paccanaro, L. Bögre, <em>Exploring the evolutionary path of plant MAPK networks</em>, <span class="journal">Trends Plant Sci.</span>, <strong>17</strong> (9), 518-525, <a href="http://www.sciencedirect.com/science/article/pii/S1360138512001082" class="urlextern" title="tips_2012" rel="nofollow">(link)</a>, <strong>2012</strong>.
-</p>
+    <p>Since 2015 most of my work has been applied. The problems have been credit scoring with alternative data sources, fraud detection over transactional and graph-structured data, entity resolution and approximate matching on business names, algorithmic fairness, and privacy-preserving learning. More recently, retrieval-augmented systems over document collections.</p>
 
-<p><a name="2"></a>
-[2] P. Radivojac, W. T. Clark, T. R. Oron, A. M. Schnoes, T. Wittkop, A. Sokolov, K. Graim, C. Funk, K. Verspoor, A. Ben-Hur, G. Pandey, J. M. Yunes, A. S. Talwalkar, S. Repo, M. L. Souza, D. Piovesan, R. Casadio, Z. Wang, J. Cheng, H. Fang, J. Gough, P. Koskinen, P. Törönen, J. Nokso-Koivisto, L. Holm, D. Cozzetto, D. W. A. Buchan, K. Bryson, D. T. Jones, B. Limaye, H. Inamdar, A. Datta, S. K. Manjari, R. Joshi, M. Chitale, D. Kihara, A. M. Lisewski, S. Erdin, E. Venner, O. Lichtarge, R. Rentzsch, H. Yang, <span class="author">A. E. Romero</span>, P. Bhat, A. Paccanaro, T. Hamp, R. Kassner, S. Seemayer, E. Vicedo, C. Schaefer, D. Achten, F. Auer, A. Boehm, T. Braun, M. Hecht, M. Heron, P. Hönigschmid, T. A. Hopf, S. Kaufmann, M. Kiening, D. Krompass, C. Landerer, Y. Mahlich, M. Roos, J. Björne, T. Salakoski, A. Wong, H. Shatkay, F. Gatzmann, I. Sommer, M. N. Wass, M. J. E. Sternberg, N. Škunca, F. Supek, M. Bošnjak, P. Panov, S. Džeroski, T. Šmuc, Y. A. I. Kourmpetis, A. D. J. van Dijk, C. J. F. ter Braak, T. Zhou, Q. Gong, X. Dong, W. Tian, M. Falda, P. Fontana, E. Lavezzo, B. Di Camillo, S. Toppo, L. Lan, N. Djuric, Y. Guo, S. Vucetic, A. Bairoch, M. Linial, P. C. Babbitt, S. E. Brenner, C. Orengo, B. Rost, S. D Mooney &amp; I. Friedberg, <em>A large-scale evaluation of computational protein function prediction</em>, <span class="journal">Nat. Methods</span>,  <strong>10</strong> (3), 221-227, <strong>2013</strong>.
-</p>
+    <p>This side of the work rarely produces papers, but it changes how I think about the rest. A method that is elegant and a method that survives contact with real data, real latency budgets and real maintenance are not always the same method, and the gap between them is itself interesting.</p>
+  </main>
+  </div>
 
-<p><a name="3"></a>[3] H. Yang, <span class="author">A. E. Romero</span>, P. Bhat, A. Paccanaro, <em>Ab initio protein function prediction using diffusion on graphs</em> (under preparation).</p>
-
-<p><a name="4"></a>[4] H. Caniza, <span class="author">A. E. Romero</span><strong>*</strong>, S. Heron, H. Yang, A. Devoto, M. Frasca,
-M. Mesiti, G. Valentini, A. Paccanaro, <em>GOssTo: a user-friendly stand-alone and web tool for calculating semantic similarities on the Gene Ontology</em>, <span class="journal">Bioinformatics</span>, <strong>30</strong>(15), 2235-2236, <strong>2014</strong>. (<a href="http://bioinformatics.oxfordjournals.org/content/30/15/2235" class="urlextern" title="bioinformatics_2014" rel="nofollow">link</a>) </p>
-
-<p><a name="5"></a>[5] <span class="author">A. E. Romero</span>, T. Nepusz, R. Sasidharan, A. Paccanaro, <em>ConSAT, a catalogue of protein consensus domain architectures</em> (under review).</p>
-
-<p><a name="6"></a>[6] H. Caniza, <span class="author">A. E. Romero</span>, A. Paccanaro, <em>A new measure of disease similarity</em> (under preparation).</p>
-
-<p><a name="7"></a>[7] G. Valentini, A. Paccanaro, H. Caniza, <span class ="author">A. E. Romero</span>, M. Re, <em>An extensive analysis of disease-gene associations using network integration and fast kernel-based gene prioritization methods</em>, <span class="journal">Artif. Intell. Med.</span>, <strong>61</strong>(2), 63-78, <strong>2014</strong>. (<a href="http://www.aiimjournal.com/article/S0933-3657(14)00022-0/abstract" class="urlextern" title="aiim_2014" rel="nofollow">link</a>)</p>
-
-      </div>
-
-		<div class="footer">
-
-			 <div class="footnotes">
-			 </div>
-
-		</div>
-
-	</div>
 </div>
-
 </body>
 </html>
-
-
