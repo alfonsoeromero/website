@@ -39,19 +39,27 @@
 
     <p>The systems from that period were <a href="software.html#garnata">Garnata</a>, a retrieval engine for structured documents built on influence diagrams, and an earlier XML indexing engine written in C++ that ended up powering the search system for the proceedings of the Parliament of Andalusia. Both were evaluated at INEX over several years.</p>
 
+    <p class="seealso"><em>Selected work: the Garnata and INEX papers in the <a href="publications.html#international_conferences_published_in_lecture_notes_series">Lecture Notes</a> series, and my <a href="publications.html#phd_thesis">doctoral thesis</a>.</em></p>
+
     <h2>Semi-supervised learning on graphs</h2>
 
     <p>A recurring problem in my work is the following: a property is known for a small subset of the nodes of a network and unknown for the rest, and the structure of the network is informative about that property. This is the semi-supervised setting on graphs, and label propagation and diffusion methods are the natural tools for it.</p>
 
     <p>The clearest example is <a href="software.html#s2f">S2F</a>, a method for annotating the proteins of organisms for which little more than the sequence is known. The idea is to build a composite network by transferring functionally relevant information from well-studied organisms, and then diffuse the few known labels over it. It was published in <em>Nature Machine Intelligence</em>. The same framing underlies work on gene-disease association, where the question is how best to combine several heterogeneous networks before propagating.</p>
 
+    <p class="seealso"><em>Selected work: Torres et al., <a href="publications.html#torres-nmi-2021">Nature Machine Intelligence</a>, 2021; Valentini et al., <a href="publications.html#valentini-aim-2014">Artificial Intelligence in Medicine</a>, 2014.</em></p>
+
     <h2>Semantic similarity</h2>
 
     <p>Measuring how similar two entities are when the only thing relating them is their position in an ontology is a surprisingly subtle problem, and the answer depends heavily on what the similarity will be used for. I wrote <a href="software.html#gossto">GOssTo</a>, a tool for computing several of these measures over the Gene Ontology, published in <em>Bioinformatics</em>. I also worked on similarity between diseases built from ontology structure and text, which matters most for rare diseases, where molecular information is scarce or absent.</p>
 
+    <p class="seealso"><em>Selected work: Caniza et al., <a href="publications.html#caniza-bioinformatics-2014">Bioinformatics</a>, 2014; Caniza et al., <a href="publications.html#caniza-screp-2015">Scientific Reports</a>, 2015.</em></p>
+
     <h2>Multi-label and hierarchical classification</h2>
 
     <p>Many real classification problems are not single-label: a document belongs to several categories at once, those categories are organised in a hierarchy, and the labels are correlated in ways a set of independent binary classifiers cannot capture. I worked on probabilistic approaches to this, and on the related question of how such systems should be evaluated, which is an area where the standard metrics are chosen badly more often than not.</p>
+
+    <p class="seealso"><em>Selected work: Romero and de Campos, <a href="publications.html#romero-ida-2014">Intelligent Data Analysis</a>, 2014; de Campos and Romero, <a href="publications.html#campos-ijar-2009">International Journal of Approximate Reasoning</a>, 2009. The classifiers were implemented in <a href="software.html#daurolab">DauroLab</a> and <a href="software.html#rebayct">Rebayct</a>.</em></p>
 
     <h2>Models that run in production</h2>
 
