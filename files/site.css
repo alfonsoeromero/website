@@ -251,6 +251,10 @@ hr {
 
 .refs li { margin-bottom: 1.4rem; }
 
+.refs .author { color: var(--ink); font-weight: 500; }
+
+.refs .nauthors { color: var(--muted); font-size: 0.875em; }
+
 /* ---------------------------- figures ---------------------------- */
 
 img { max-width: 100%; height: auto; border: 0; }
