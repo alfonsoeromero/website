@@ -308,3 +308,18 @@ img { max-width: 100%; height: auto; border: 0; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+
+.software-logo {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.software-logo img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
